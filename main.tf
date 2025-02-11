@@ -3,9 +3,10 @@ provider "aws" {
   profile = "default"
 }
 
+#probar mi primer bucket 
 resource "aws_s3_bucket" "mi_primer_bucket" {
   bucket = "mi-bucket-prueba-01"
-  acl    = "private"
+  
 }
 
 output "s3_bucket_name" {
@@ -18,4 +19,11 @@ output "bucket_arn" {
 
 output "bucket_url"{
     value = aws_s3_bucket.mi_primer_bucket.bucket_domain_name
+}
+
+#crear bucket en S3 para almacenar el tfstate
+
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = "terraform-state-storage-01"
+  acl = "private"
 }
