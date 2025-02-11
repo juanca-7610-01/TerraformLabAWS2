@@ -40,4 +40,5 @@ resource "aws_s3_bucket" "bucket_terraform_state" {
     Environment = "Dev"
     Owner = "Equipo-CloudOps"
     CostCenter = "Panama"
+    }
 }
