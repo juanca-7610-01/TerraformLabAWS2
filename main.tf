@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "mi_primer_bucket" {
-  bucket = "mi-bucket-de-pruebas-terraform-123456"
+  bucket = "mi-bucket-prueba-01"
   acl    = "private"
 }
 
