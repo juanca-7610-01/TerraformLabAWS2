@@ -23,7 +23,7 @@ output "bucket_url"{
 
 #crear bucket en S3 para almacenar el tfstate
 
-resource "aws_s3_bucket" "terraform_state" {
+resource "aws_s3_bucket" "bucket_terraform_state" {
   bucket = "terraform-state-storage-01"
   acl = "private"
 }
